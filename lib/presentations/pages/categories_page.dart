@@ -14,10 +14,12 @@ class CategoriesPage extends StatelessWidget {
       appBar: AppBar(
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: SvgPicture.asset(
-            "assets/svg/vector.svg",
-            width: 30,
-            height: 14,
+          child: Center(
+            child: SvgPicture.asset(
+              "assets/svg/vector.svg",
+              width: 30,
+              height: 14,
+            ),
           ),
         ),
         backgroundColor: AppColors.backgrounColor,
@@ -26,9 +28,9 @@ class CategoriesPage extends StatelessWidget {
           child: Text(
             "Category",
             style: TextStyle(
-                color: AppColors.pinkSub,
+                color: AppColors.redPinkMain,
                 fontSize: 24,
-                fontWeight: FontWeight.w500),
+                fontWeight: FontWeight.bold),
           ),
         ),
         actions: [
@@ -38,8 +40,12 @@ class CategoriesPage extends StatelessWidget {
               width: 28,
               height: 28,
               color: AppColors.actionsColor,
-              child: SvgPicture.asset(
-                "assets/svg/notification.svg",
+              child: Center(
+                child: SvgPicture.asset(
+                  "assets/svg/notification.svg",
+                  width: 18,
+                  height: 18,
+                ),
               ),
             ),
           ),
@@ -52,15 +58,20 @@ class CategoriesPage extends StatelessWidget {
               width: 28,
               height: 28,
               color: AppColors.actionsColor,
-              child: SvgPicture.asset(
-                "assets/svg/search.svg",
+              child: Center(
+                child: SvgPicture.asset(
+                  "assets/svg/search.svg",
+                  width: 20,
+                  height: 20,
+                ),
               ),
             ),
           ),
         ],
       ),
-      body: const Column(
-        children: [
+      body: ListView(
+        children: const [
+          SizedBox(height: 10),
           CategoryItemMain(),
           SizedBox(height: 18,),
           Row(
