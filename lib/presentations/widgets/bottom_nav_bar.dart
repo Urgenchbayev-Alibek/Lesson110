@@ -10,22 +10,28 @@ class BottomNavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Align(
       alignment: Alignment.bottomCenter,
-      child: Container(
-        width: 281,
-        height: 56,
-        decoration: BoxDecoration(
-          color: AppColors.redPinkMain,
-          borderRadius: BorderRadius.circular(33),
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            SvgPicture.asset("assets/svg/home.svg"),
-            SvgPicture.asset("assets/svg/community.svg"),
-            SvgPicture.asset("assets/svg/categories.svg"),
-            SvgPicture.asset("assets/svg/profile.svg")
-          ],
-        ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          Container(
+            width: 281,
+            height: 56,
+            decoration: BoxDecoration(
+              color: AppColors.redPinkMain,
+              borderRadius: BorderRadius.circular(33),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                SvgPicture.asset("assets/svg/home.svg"),
+                SvgPicture.asset("assets/svg/community.svg"),
+                SvgPicture.asset("assets/svg/categories.svg"),
+                SvgPicture.asset("assets/svg/profile.svg")
+              ],
+            ),
+          ),
+          const SizedBox(height: 35),
+        ],
       ),
     );
   }

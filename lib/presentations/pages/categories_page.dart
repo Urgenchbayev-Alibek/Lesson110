@@ -11,7 +11,9 @@ class CategoriesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       appBar: AppBar(
+        surfaceTintColor: Colors.transparent,
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Center(
@@ -43,7 +45,7 @@ class CategoriesPage extends StatelessWidget {
               child: Center(
                 child: SvgPicture.asset(
                   "assets/svg/notification.svg",
-                  width: 18,
+                  width: 12,
                   height: 18,
                 ),
               ),
@@ -70,6 +72,7 @@ class CategoriesPage extends StatelessWidget {
         ],
       ),
       body: ListView(
+        padding: const EdgeInsets.only(bottom: 120),
         children: const [
           SizedBox(height: 10),
           CategoryItemMain(),
@@ -120,9 +123,9 @@ class CategoriesPage extends StatelessWidget {
               ),
             ],
           ),
-          BottomNavBar()
         ],
       ),
+      bottomNavigationBar:  const BottomNavBar(),
       backgroundColor: AppColors.backgrounColor,
     );
   }
